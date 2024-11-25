@@ -1,0 +1,41 @@
+
+<html>
+<head>
+   <title>Register</title>
+</head>
+<body >
+    <center>
+    <div style="justify-content:center;align-items:center">
+        <h1>regidter </h1>
+    <main>
+      <h2>Register</h2>
+        <form style="border: 1px solid gray; padding: 20px;border-radius: 5px; width: 300px;height:200px;">
+            <div style="color:black; height: 20px; width:20px;text-align:center;align-items:center">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            <br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <br><br>
+            <button type="submit">Register</button>
+        </div>
+        </form>
+    </main>
+</div>
+</center>
+
+<script>
+    document.getElementById("button").addEventListener('click', () => {
+        const str = document.getElementById("name").value;
+        if (str.length > 25) {
+            alert("Name cannot be more than 25 characters");
+            return; // Prevent further execution
+        }
+        alert("You have successfully registered");
+    });
+</script>
+</body>
+</html>
